@@ -31,7 +31,7 @@ ENV PATH $PATH:$JAVA_HOME/bin
 
 # download native support
 RUN mkdir -p /tmp/native
-RUN curl -Ls https://storage.googleapis.com/hdfs-bucket/hadoop/hadoop-native-64-2.7.1.tar | tar -x -C /tmp/native
+RUN curl -Ls https://s3.amazonaws.com/torusware/hadoop-nativelib-2.7.1-64.tgz | tar -x -C /tmp/native
 
 # hadoop
 RUN curl -s http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.1/hadoop-2.7.1.tar.gz | tar -xz -C /usr/local/
